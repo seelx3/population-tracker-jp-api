@@ -2,7 +2,7 @@
 
 [population-tracker-jp](https://github.com/seelx3/population-tracker-jp) の動作確認用の API サーバーです。
 
-## Usage
+## 使い方
 
 - .env ファイルを作成し、以下のように環境変数を作成してください。
 
@@ -24,10 +24,10 @@ PREFECTURES_API_URL="http://localhost:3030/api/v1/prefectures"
 yarn start
 ```
 
-以上で API サーバーが起動した上で、 `population-tracker-jp` を起動することで、ローカルで本 API サーバーを利用してデータを取得して動作確認することができます。
+API サーバーを起動した状態で、 `population-tracker-jp` を起動することで、本 API サーバーを利用して動作確認することができます。
 
-## Other
+## その他
 
-本 API は、 RESAS（地域経済分析システム）[https://resas.go.jp/] のデータを加工して作成しています。
+本 API は、 [RESAS（地域経済分析システム）](https://resas.go.jp/) のデータを加工して作成しています。
 
 - [RESAS 関連サービス 利用規約](https://opendata.resas-portal.go.jp/terms.html)
