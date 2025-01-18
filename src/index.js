@@ -15,6 +15,8 @@ app.get("/api/v1/prefectures", (req, res) => {
     return res.status(403).json({ error: "Forbidden" });
   }
 
+  console.log("GET /api/v1/prefectures");
+
   const query = `SELECT value FROM kv_store WHERE key = ?`;
 
   db.get(query, ["prefectures"], (err, row) => {
@@ -40,6 +42,8 @@ app.get("/api/v1/population/composition/perYear", (req, res) => {
   }
 
   const { cityCode, prefCode } = req.query;
+
+  console.log(`GET /api/v1/population/composition/perYear?cityCode=${cityCode}&prefCode=${prefCode}`);
 
   if (cityCode !== "-" || !prefCode) {
     return res.status(400).json({ error: "Invalid query parameters" });
